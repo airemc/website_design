@@ -1,0 +1,338 @@
+* {
+  /* Universal Styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* tüm yazıları kapsaması için*/
+  font-size: 7px;
+  /* Base font size for responsive design */
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+#logo-box {
+  float: left;
+
+}
+
+#logo-box .logo {
+  width: auto;
+  height: 180px;
+
+}
+
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#nav-links {
+  float: right;
+}
+
+#nav-links .nav-item {
+  float: left;
+  margin: 1rem;
+  padding-right: 1rem;
+
+}
+
+#nav-links .nav-link {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  display: block;
+  letter-spacing: 0.1rem;
+  transition: color 0.4s;
+  padding-top: 10rem;
+
+
+}
+
+#nav-links .nav-link:hover {
+  color: black;
+}
+
+/*Navbar*/
+nav {
+  width: 100%;
+
+  background-color: #001325;
+  height: 30rem;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 500;
+
+  /* üst barı sabitler aşağı kaysada sabit kalır*/
+}
+
+header {
+  height: 75rem;
+  padding-top: 30rem;
+  /* Header height */
+  position: relative;
+
+}
+
+header .bg-image {
+  /* Background image for header */
+  position: absolute;
+  /* Positioning for the background image */
+  background-image: url(pexels-tomfisk-3840441.jpg);
+  /* Background image for header */
+  
+  background-size: cover;
+  /* Cover the entire header */
+  background-position: center;
+  /* Center the background image */
+  height: 75rem;
+  /* Ensure the background image covers the header height */
+  width: 100%;
+  /* Full width of the header */
+  opacity: 0.8;
+  /* Opacity for the background image */
+  z-index: -1;
+  /* Place the background image behind other elements */
+}
+
+header h1 {
+  padding: 15rem;
+  /* Padding for the header title */
+  padding-bottom: 0;
+  /* Remove bottom padding for the title */
+  font-size: 8rem;
+  text-align: center;
+  color: #001325;
+
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.about-list li {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  border-left: 5px solid #001325;
+
+}
+
+.about-list img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  
+}
+
+.about-list p {
+  font-size: 2.5rem;
+}
+
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.mission-vision .box {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-left: 5px solid #001325;
+  border-radius: 10px;
+  width: 400px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.mission-vision h3 {
+  color: #0078b7;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.mission-vision p {
+  color: #0078b7;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+#c {
+    background-color: #001325;
+    color: white;
+
+    padding: 10rem;
+
+
+}
+
+#c .content {
+    padding: 1.5rem;
+    /* Padding for column content */
+    font-size: 30px;
+    /* Font size for column content */
+    text-align: center;
+
+}
+
+
+#c a {
+    color: white;
+    /* Link color in section 4 */
+    text-decoration: underline;
+    /* Underline links in section 4 */
+    margin: 2rem;
+
+}
+
+#c a:hover {
+    color: black;
+    /* Change link color on hover in section 4 */
+}
+footer {
+    background: #001325;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    font-size: 2rem;
+}
+/* Tablet boyutları için (768px - 1024px) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 6px;
+    }
+
+    #logo-box .logo {
+        height: 12vw;
+    }
+
+    header {
+        height: 80rem;
+        padding-top: 25rem;
+    }
+
+    #a h2,
+    #b h2 {
+        font-size: 4rem;
+    }
+
+
+    #b h2 {
+        padding-top: 15rem;
+    }
+
+}
+
+/* Mobil boyutları için (576px - 768px) */
+@media (max-width: 768px) {
+    html {
+        font-size: 5px;
+    }
+
+    nav {
+        height: auto;
+        padding: 1rem 0;
+        flex-direction: column;
+    }
+
+    #logo-box {
+        float: none;
+        text-align: center;
+
+    }
+
+    #logo-box .logo {
+        height: 15vw;
+    }
+
+    #nav-links {
+        float: none;
+        width: 100%;
+    }
+
+    #nav-links ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #nav-links .nav-item {
+        float: none;
+        margin: 0.5rem;
+        padding: 0;
+    }
+
+    #nav-links .nav-link {
+        padding-top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    header {
+        height: 60rem;
+        padding-top: 30rem;
+    }
+
+
+
+    #b h2 {
+        padding-top: 10rem;
+    }
+
+    #c .content {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+/* Küçük mobil cihazlar için (576px altı) */
+@media (max-width: 576px) {
+    html {
+        font-size: 4px;
+    }
+
+    header {
+        height: 75rem;
+        padding-top: 30rem;
+    }
+    #a h2,
+    #b h2 {
+        font-size: 3.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    #logo-box .logo {
+        height: 15vw;
+    }
+
+}
+

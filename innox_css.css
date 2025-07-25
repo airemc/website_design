@@ -1,0 +1,496 @@
+* {
+    /* Universal Styles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* tüm yazıları kapsaması için*/
+    font-size: 7px;
+    /* Base font size for responsive design */
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+#logo-box {
+    float: left;
+
+}
+
+#logo-box .logo {
+    width: auto;
+    max-height: 180px;
+    min-height: 80px;
+    height: 15vw;
+
+}
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav-links {
+    float: right;
+}
+
+#nav-links .nav-item {
+    float: left;
+    margin: 1rem;
+    padding-right: 1rem;
+
+}
+
+#nav-links .nav-link {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 0.1rem;
+    transition: color 0.4s;
+    padding-top: 10rem;
+    
+
+
+}
+
+#nav-links .nav-link:hover {
+    color: black;
+}
+
+/*Navbar*/
+nav {
+    width: 100%;
+
+    background-color: #001325;
+    height: 200px;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 500;
+
+    /* üst barı sabitler aşağı kaysada sabit kalır*/
+}
+
+
+header {
+    height: 100vh;
+    padding-top: 30vh;
+    /* Header height */
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: cover;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #001325;
+    top: 40%;
+    width: 100%;
+}
+
+
+/* Özel boyutlandırmalar */
+.overlay h1 {
+    font-size: 8rem;
+    line-height: 1.2;
+    padding: 0 2rem;
+    color: white;
+}
+
+.overlay p {
+    font-size: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color:white;
+}
+
+
+#a {
+    height: 300px;
+
+    background-color: white;
+
+    color: hsl(209, 100%, 7%);
+
+}
+
+#a h2 {
+    font-size: 5rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    color: #001325;
+}
+
+.neden-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 40px;
+
+
+}
+
+.neden-item {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    height: 300px;
+    flex: 1;
+}
+
+.neden-item img {
+    width: 8vw;
+    height: 8vw;
+    max-width: 60px;
+    max-height: 60px;
+    min-width: 30px;
+    min-height: 30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.neden-item h3 {
+    font-size: 3rem;
+
+}
+
+.neden-item p {
+    font-size: 2rem;
+    color: #555;
+}
+
+
+img {
+    width: 100%;
+    /* Full width for images */
+
+    height: auto;
+    /* Maintain aspect ratio */
+
+}
+
+
+#b .container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Taşarsa alta geçsin */
+    justify-content: center;
+    /* Ortala */
+    gap: 30px;
+    /* Kutular arası boşluk */
+    padding: 40px 0;
+    background-color: white;
+}
+
+#b h2 {
+    font-size: 5rem;
+    padding-top: 20rem;
+    text-align: center;
+    color: #001325;
+
+}
+
+.col {
+    flex: 0 1 300px;
+    /* Genişlik kontrolü */
+    display: flex;
+    justify-content: center;
+}
+
+.hizmetler_box {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #001325;
+
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+
+
+.hizmetler_box a {
+    text-decoration: none;
+    font-size: 3rem;
+    color: #001325;
+    display: block;
+    padding: 1.5rem;
+    white-space: normal;
+
+}
+
+
+
+#c {
+    background-color: #001325;
+    color: white;
+
+    padding: 10rem;
+
+
+}
+
+#c .content {
+    padding: 1.5rem;
+    /* Padding for column content */
+    font-size: 30px;
+    /* Font size for column content */
+    text-align: center;
+
+}
+
+
+#c a {
+    color: white;
+    /* Link color in section 4 */
+    text-decoration: underline;
+    /* Underline links in section 4 */
+    margin: 2rem;
+
+}
+
+#c a:hover {
+    color: black;
+    /* Change link color on hover in section 4 */
+}
+
+footer {
+    background: #001325;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Tablet boyutları için (768px - 1024px) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 6px;
+    }
+
+    #logo-box .logo {
+        height: 12vw;
+    }
+
+    header {
+        height: 80rem;
+        padding-top: 25rem;
+    }
+
+    .overlay h1 {
+        font-size: 5rem;
+    }
+
+    .overlay p {
+        font-size: 2.5rem;
+    }
+
+    #a h2,
+    #b h2 {
+        font-size: 4rem;
+    }
+
+    .neden-item {
+        padding: 20px;
+        height: auto;
+    }
+
+    #b h2 {
+        padding-top: 15rem;
+    }
+
+    .neden-item img {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+/* Mobil boyutları için (576px - 768px) */
+@media (max-width: 768px) {
+    html {
+        font-size: 5px;
+    }
+
+    nav {
+        height: auto;
+        padding: 1rem 0;
+        flex-direction: column;
+    }
+
+    #logo-box {
+        float: none;
+        text-align: center;
+
+    }
+
+    #logo-box .logo {
+        height: 15vw;
+    }
+
+    #nav-links {
+        float: none;
+        width: 100%;
+    }
+
+    #nav-links ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #nav-links .nav-item {
+        float: none;
+        margin: 0.5rem;
+        padding: 0;
+    }
+
+    #nav-links .nav-link {
+        padding-top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    header {
+        height: 60rem;
+        padding-top: 30rem;
+    }
+
+    .overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .overlay p {
+        font-size: 1.6rem;
+    }
+
+
+    .neden-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .neden-item {
+        padding: 15px;
+    }
+
+    #b h2 {
+        padding-top: 10rem;
+    }
+
+    #c .content {
+        font-size: 2.5rem;
+    }
+
+    .neden-item img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .hizmetler_box a {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+
+    .neden-item h3 {
+        font-size: 2rem;
+    }
+
+    .neden-item p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Küçük mobil cihazlar için (576px altı) */
+@media (max-width: 576px) {
+    html {
+        font-size: 4px;
+    }
+
+    header {
+        height: 50rem;
+        padding-top: 30rem;
+    }
+
+    .overlay h1 {
+        font-size: 3.5rem;
+    }
+
+    .overlay p {
+        font-size: 1.8rem;
+    }
+
+    #a h2{
+        font-size: 3.5rem;
+    }
+    #b h2 {
+        font-size: 3.5rem;
+        padding-top: 45rem;
+    }
+
+    .hizmetler_box a {
+        font-size: 2.5rem;
+        box-shadow: 3px;
+    }
+
+    #c {
+        padding: 5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    #logo-box .logo {
+        height: 15vw;
+    }
+
+    .neden-item img {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    #b .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* Taşarsa alta geçsin */
+        justify-content: center;
+        /* Ortala */
+        gap: 15px;
+        /* Kutular arası boşluk */
+   
+        background-color: white;
+        padding-top: 10rem;
+    }
+}
