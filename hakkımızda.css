@@ -13,75 +13,110 @@ html {
 }
 
 
-
 #logo-box {
-  float: left;
+    float: left;
+    background-color: white;
+    padding-left: 5rem;
 
 }
 
 #logo-box .logo {
-  width: auto;
-  height: 180px;
+    width: auto;
+    height: 145px;
+    
+    
 
 }
 
 
 .clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+    content: "";
+    display: block;
+    clear: both;
 }
 
-#nav-links {
-  float: right;
+.nav-links {
+
+    display: flex;
+    align-items: center; /* Dikeyde ortalar */
+    gap: 15rem;
+    padding-top: 10rem;
+    padding-left: 20rem;
+    
 }
 
-#nav-links .nav-item {
-  float: left;
-  margin: 1rem;
-  padding-right: 1rem;
+.links {
+    display: inline-block; /* Yan yana hizalar */
+    
+    
+}
+
+.links a {
+    color: #001325;
+    font-size: 3rem;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 0.1rem;
+    transition: color 0.4s;
+    
+   
+    text-decoration: none;
+}
+
+#nav-links a:hover {
+    color: rgb(99, 4, 4);
+}
+.iletisim img {
+    width: 30px;
+    height: 30px;
+
 
 }
 
-#nav-links .nav-link {
-  color: white;
-  font-size: 3rem;
-  font-weight: 700;
-  display: block;
-  letter-spacing: 0.1rem;
-  transition: color 0.4s;
-  padding-top: 10rem;
-
+.iletisim_box {
+    padding-right: 20rem;
+    
+    padding-top: 3rem;
+    
 
 }
 
-#nav-links .nav-link:hover {
-  color: black;
+.iletisim {
+    display: inline-block;
+    margin: 3rem;}
+
+
+
+.iletisim_ a {
+    font-size: 3rem;
+    color: #001325;
 }
 
 /*Navbar*/
 nav {
-  width: 100%;
+    /* dikey ortalama */
+    width: 100%;
 
-  background-color: #001325;
-  height: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* dikey ortalama */
 
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 500;
+    background-color: white;
+    height: 150px;
+    position: fixed;
+    z-index: 500;
 
-  /* üst barı sabitler aşağı kaysada sabit kalır*/
+    /* üst barı sabitler aşağı kaysada sabit kalır*/
 }
 
+
 header {
-  height: 75rem;
-  padding-top: 30rem;
-  /* Header height */
-  position: relative;
+    height: 75vh;
+    padding-top: 150px;
+    /* Header height */
+    position: relative;
+    overflow: hidden;
 
 }
 
@@ -120,7 +155,7 @@ header h1 {
 .container {
   background-color: #ffffff;
   padding: 20rem;
-  font-family: Arial, sans-serif;
+
   text-align: center;
 }
 

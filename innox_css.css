@@ -16,14 +16,16 @@ html {
 
 #logo-box {
     float: left;
+    background-color: white;
+    padding-left: 5rem;
 
 }
 
 #logo-box .logo {
     width: auto;
-    max-height: 180px;
-    min-height: 80px;
-    height: 15vw;
+    height: 145px;
+
+
 
 }
 
@@ -34,46 +36,84 @@ html {
     clear: both;
 }
 
-#nav-links {
-    float: right;
+.nav-links {
+
+    display: flex;
+    align-items: center;
+    /* Dikeyde ortalar */
+    gap: 15rem;
+    padding-top: 10rem;
+    padding-left: 20rem;
+
 }
 
-#nav-links .nav-item {
-    float: left;
-    margin: 1rem;
-    padding-right: 1rem;
+.links {
+    display: inline-block;
+    /* Yan yana hizalar */
+
+
 
 }
 
-#nav-links .nav-link {
-    color: white;
+.links a {
+    color: #001325;
     font-size: 3rem;
     font-weight: 700;
     display: block;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     transition: color 0.4s;
-    padding-top: 10rem;
+
+
+    text-decoration: none;
+
+
+}
+
+.links a:hover {
+    color: rgb(99, 4, 4);
+}
+
+.iletisim img {
+    width: 30px;
+    height: 30px;
+
+
+}
+
+.iletisim_box {
+    padding-right: 20rem;
+    
+    padding-top: 3rem;
     
 
-
 }
 
-#nav-links .nav-link:hover {
-    color: black;
+.iletisim {
+    display: inline-block;
+    margin: 3rem;}
+
+
+
+.iletisim_ a {
+    font-size: 3rem;
+    color: #001325;
 }
+
+
+
 
 /*Navbar*/
 nav {
+
     width: 100%;
 
-    background-color: #001325;
-    height: 200px;
-
-    padding-top: 3rem;
-    padding-bottom: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* dikey ortalama */
+
+    background-color: white;
+    height: 150px;
     position: fixed;
     z-index: 500;
 
@@ -83,7 +123,7 @@ nav {
 
 header {
     height: 100vh;
-    padding-top: 30vh;
+    padding-top: 150px;
     /* Header height */
     position: relative;
     overflow: hidden;
@@ -125,7 +165,7 @@ video {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 2rem;
-    color:white;
+    color: white;
 }
 
 
@@ -451,9 +491,10 @@ footer {
         font-size: 1.8rem;
     }
 
-    #a h2{
+    #a h2 {
         font-size: 3.5rem;
     }
+
     #b h2 {
         font-size: 3.5rem;
         padding-top: 45rem;
@@ -489,7 +530,7 @@ footer {
         /* Ortala */
         gap: 15px;
         /* Kutular arası boşluk */
-   
+
         background-color: white;
         padding-top: 10rem;
     }

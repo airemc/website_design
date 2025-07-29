@@ -13,6 +13,7 @@ html {
 }
 
 
+
 #logo-box {
     float: left;
     background-color: white;
@@ -34,7 +35,6 @@ html {
     display: block;
     clear: both;
 }
-
 .nav-links {
 
     display: flex;
@@ -110,9 +110,10 @@ nav {
     /* üst barı sabitler aşağı kaysada sabit kalır*/
 }
 
+
 header {
     height: 75rem;
-    padding-top: 30rem;
+    padding-top: 150px;
     /* Header height */
     position: relative;
 
@@ -124,11 +125,12 @@ header .bg-image {
     /* Positioning for the background image */
     background-image: url(pexels-tomfisk-3840441.jpg);
     /* Background image for header */
+
     background-size: cover;
     /* Cover the entire header */
     background-position: center;
     /* Center the background image */
-    height: 50rem;
+    height: 75rem;
     /* Ensure the background image covers the header height */
     width: 100%;
     /* Full width of the header */
@@ -149,48 +151,41 @@ header h1 {
 
 }
 
-.hizmetler_box {
-    padding: 30rem;
-    padding-top: 10rem;
+#galeri {
+    height: 75rem;
     background-color: white;
-    
+}
 
+.box img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    display: inline-block;
+
+}
+
+.container {
+    padding: 10rem;
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+}
+
+#galeri .box {
+    border-radius: 15px;
     text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px #555;
+    background-color: #001325;
 
 
 }
 
-.boxxes {
-
-    align-items: center;
-    /* Dikeyde ortalar */
-    border-radius: 10px;
-    height: auto;
-    padding: 2rem;
-    /* İç boşluk eklendi */
-    margin: 2rem;
-    border-left: 5px solid #001325;
-
-    background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+.box p {
     font-size: 3rem;
-}
+    color: white;
 
-.boxxes h2 {
-    font-size: 5rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    color: #001325;
-    text-align: left;
-    margin: 2rem;
-    border-left: 5px solid #001325;
-}
-ul li{
-    text-align: left;
-    margin: 2rem;
-    
-}
-span{
-    color: #555;
+
 }
 
 #c {
@@ -233,165 +228,3 @@ footer {
     text-align: center;
     font-size: 2rem;
 }
-/* Tablet boyutları için (768px - 1024px) */
-@media (max-width: 1024px) {
-    html {
-        font-size: 6px;
-    }
-
-    #logo-box .logo {
-        height: 12vw;
-    }
-
-    header {
-        height: 80rem;
-        padding-top: 25rem;
-    }
-
-    .overlay h1 {
-        font-size: 5rem;
-    }
-
-    .overlay p {
-        font-size: 2.5rem;
-    }
-
-    #a h2,
-    #b h2 {
-        font-size: 4rem;
-    }
-
-    .neden-item {
-        padding: 20px;
-        height: auto;
-    }
-
-    #b h2 {
-        padding-top: 15rem;
-    }
-
-    .neden-item img {
-        width: 10vw;
-        height: 10vw;
-    }
-}
-
-/* Mobil boyutları için (576px - 768px) */
-@media (max-width: 768px) {
-    html {
-        font-size: 5px;
-    }
-
-    nav {
-        height: auto;
-        padding: 1rem 0;
-        flex-direction: column;
-    }
-
-    #logo-box {
-        float: none;
-        text-align: center;
-
-    }
-
-    #logo-box .logo {
-        height: 15vw;
-    }
-
-    #nav-links {
-        float: none;
-        width: 100%;
-    }
-
-    #nav-links ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    #nav-links .nav-item {
-        float: none;
-        margin: 0.5rem;
-        padding: 0;
-    }
-
-    #nav-links .nav-link {
-        padding-top: 1rem;
-        font-size: 2.5rem;
-    }
-
-    header {
-        height: 60rem;
-        padding-top: 30rem;
-    }
-
-    .overlay h1 {
-        font-size: 2.5rem;
-    }
-
-    .overlay p {
-        font-size: 1.6rem;
-    }
-
-
-    .neden-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .neden-item {
-        padding: 15px;
-    }
-
-    #b h2 {
-        padding-top: 10rem;
-    }
-
-    #c .content {
-        font-size: 2.5rem;
-    }
-
-    .neden-item img {
-        width: 15vw;
-        height: 15vw;
-    }
-
-    .hizmetler_box a {
-        font-size: 1.8rem;
-        padding: 1rem;
-    }
-
-    .neden-item h3 {
-        font-size: 2rem;
-    }
-
-    .neden-item p {
-        font-size: 1.6rem;
-    }
-}
-
-/* Küçük mobil cihazlar için (576px altı) */
-@media (max-width: 576px) {
-    html {
-        font-size: 4px;
-    }
-
-    header {
-        height: 75rem;
-        padding-top: 30rem;
-    }
-    #a h2,
-    #b h2 {
-        font-size: 3.5rem;
-    }
-
-    footer {
-        font-size: 1.5rem;
-    }
-
-    #logo-box .logo {
-        height: 15vw;
-    }
-
-}
-
