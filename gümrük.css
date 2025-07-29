@@ -378,6 +378,14 @@ footer {
     #logo-box .logo {
         height: 15vw;
     }
+    .boxxes{
+        width: 400px;
+        
+    }
+    .hizmetler_box{
+        padding: 5rem;
+        align-items: center;
+    }
 
 }
 
