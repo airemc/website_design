@@ -24,8 +24,8 @@ html {
 #logo-box .logo {
     width: auto;
     height: 145px;
-    
-    
+
+
 
 }
 
@@ -35,20 +35,23 @@ html {
     display: block;
     clear: both;
 }
+
 .nav-links {
 
     display: flex;
-    align-items: center; /* Dikeyde ortalar */
+    align-items: center;
+    /* Dikeyde ortalar */
     gap: 15rem;
     padding-top: 10rem;
     padding-left: 20rem;
-    
+
 }
 
 .links {
-    display: inline-block; /* Yan yana hizalar */
-    
-    
+    display: inline-block;
+    /* Yan yana hizalar */
+
+
 }
 
 .links a {
@@ -58,14 +61,15 @@ html {
     display: block;
     letter-spacing: 0.1rem;
     transition: color 0.4s;
-    
-    
+
+
     text-decoration: none;
 }
 
 #nav-links a:hover {
     color: rgb(99, 4, 4);
 }
+
 .iletisim_ img {
     width: 30px;
     height: 30px;
@@ -162,14 +166,14 @@ header h1 {
     text-align: center;
     width: 300px;
     box-shadow: 0 0 10px #555;
-    background-color: #001325;
+    background-color: white;
 
 
 }
 
 .box p {
     font-size: 3rem;
-    color: white;
+    color: #001325;
 
 
 }
@@ -232,6 +236,163 @@ footer {
     z-index: 1000;
 }
 
+/* Tablet boyutları için (768px - 1024px) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 6px;
+    }
+
+    #logo-box .logo {
+        height: 12vw;
+    }
+
+    header {
+        height: 80rem;
+        padding-top: 25rem;
+    }
+
+    #a h2,
+    #b h2 {
+        font-size: 4rem;
+    }
+
+    .box {
+        padding: 20px;
+        height: auto;
+    }
+
+    .box img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #b h2 {
+        padding-top: 15rem;
+    }
+
+
+}
+
+/* Mobil boyutları için (576px - 768px) */
+@media (max-width: 768px) {
+    html {
+        font-size: 5px;
+    }
+
+    nav {
+        height: auto;
+        padding: 1rem 0;
+        flex-direction: column;
+    }
+
+    #logo-box {
+        float: none;
+        text-align: center;
+
+    }
+
+    #logo-box .logo {
+        height: 15vw;
+    }
+
+    #nav-links {
+        float: none;
+        width: 100%;
+    }
+
+    #nav-links ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #nav-links .nav-item {
+        float: none;
+        margin: 0.5rem;
+        padding: 0;
+    }
+
+    #nav-links .nav-link {
+        padding-top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    header {
+        height: 60rem;
+        padding-top: 30rem;
+    }
+
+
+
+    #b h2 {
+        padding-top: 10rem;
+    }
+
+    #c .content {
+        font-size: 2.5rem;
+    }
+
+    .box {
+        padding: 20px;
+        height: auto;
+    }
+
+    .box img {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+/* Küçük mobil cihazlar için (576px altı) */
+@media (max-width: 576px) {
+    html {
+        font-size: 4px;
+    }
+
+    header {
+        height: 70rem;
+        padding-top: 30rem;
+    }
+
+    #a h2,
+    #b h2 {
+        font-size: 3.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    #logo-box .logo {
+        height: 15vw;
+    }
+
+    .container {
+        padding: 10rem;
+        display: flex;
+        gap: 5rem;
+
+        margin: auto;
+    }
+
+    #galeri .box {
+        padding: 20px;
+        height: auto;
+
+        width: 150px;
+    }
+
+    .box img {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
 /* Mobil görünümde menüyü yönet */
 @media (max-width: 1024px) {
     .mobile-menu-btn {
@@ -264,6 +425,6 @@ footer {
         text-align: center;
         padding: 1.5rem 0;
         color: #001325;
-        
+
     }
 }
