@@ -365,6 +365,10 @@ footer {
     header {
         height: 70rem;
         padding-top: 30rem;
+        
+    }
+    header h1{
+        align-items: center;
     }
     #a h2,
     #b h2 {
@@ -379,7 +383,7 @@ footer {
         height: 15vw;
     }
     .boxxes{
-        width: 400px;
+        width: 300px;
         
     }
     .hizmetler_box{
