@@ -66,26 +66,12 @@ html {
 #nav-links a:hover {
     color: rgb(99, 4, 4);
 }
-.iletisim img {
+.iletisim_ img {
     width: 30px;
     height: 30px;
 
 
 }
-
-.iletisim_box {
-    padding-right: 20rem;
-    
-    padding-top: 3rem;
-    
-
-}
-
-.iletisim {
-    display: inline-block;
-    margin: 3rem;}
-
-
 
 .iletisim_ a {
     font-size: 3rem;
@@ -353,7 +339,7 @@ footer {
     }
 
     header {
-        height: 75rem;
+        height: 70rem;
         padding-top: 30rem;
     }
     #a h2,
@@ -371,3 +357,55 @@ footer {
 
 }
 
+/* MOBİL MENÜ BUTONU */
+.mobile-menu-btn {
+    display: none;
+    /* Masaüstünde gizle */
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: #001325;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+/* Mobil görünümde menüyü yönet */
+@media (max-width: 1024px) {
+    .mobile-menu-btn {
+        display: block;
+        /* Mobilde göster */
+
+    }
+
+    .nav-links {
+        display: none;
+        /* Normal menüyü mobilde gizle */
+        position: fixed;
+        top: 150px;
+        /* Navbar yüksekliği kadar aşağıda */
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Butona tıklandığında göster */
+    }
+
+    .links {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        color: #001325;
+        
+    }
+}

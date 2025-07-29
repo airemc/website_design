@@ -26,7 +26,10 @@
             <div id="logo-box">
                 <img class="logo" src="innox logo zeminsiz.png" alt="">
             </div>
-
+            <!-- EKLENEN KISIM - Mobil Menü Butonu -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-links">
                 <div class="links">
                     <a href="hakkımızda.html">HAKKIMIZDA</a>
@@ -35,29 +38,28 @@
                 <div class="links">
                     <a href="galeri.html">GALERİMİZ</a>
                 </div>
+                <div class="links">
+                    <div class="iletisim_">
+                        <img src="telephone.png">
+                    </div>
+                    <div class="iletisim_">
+                        <a href="#">0555 555 55 55</a>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="iletisim_">
+                        <img src="email.png">
+                    </div>
+                    <div class="iletisim_">
+                        <a href="#">innox@gmail.com</a>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
-        <div class="iletisim_box">
-            <div class="iletisim">
 
-                <div class="iletisim_">
-                    <img src="telephone.png">
-                </div>
-                <div class="iletisim_">
-                    <a href="#">0555 555 55 55</a>
-                </div>
-
-            </div>
-            <div class="iletisim">
-                <div class="iletisim_">
-                    <img src="email.png">
-                </div>
-                <div class="iletisim_">
-                    <a href="#">innox@gmail.com</a>
-                </div>
-            </div>
-
-        </div>
     </nav>
 
     <header>
@@ -76,9 +78,10 @@
                     müşterilerine sadece bir hizmet değil, uçtan uca bir operasyonel güven sunar. Uluslararası
                     taşımacılık deneyimimiz, güçlü liman ilişkilerimiz ve uzman ekibimiz sayesinde, her sevkiyatın
                     zamanında, güvenle ve eksiksiz şekilde gerçekleşmesini sağlıyoruz.
-                </p></div>
-                <br><br><br><br>
-                <div class="boxxes">
+                </p>
+            </div>
+            <br><br><br><br>
+            <div class="boxxes">
 
                 <h2>HİZMET KAPSAMIMIZ</h2>
                 <ul>
@@ -121,7 +124,26 @@
         </div>
         <div>Powered by ......</div>
     </footer>
+    <!-- </body> kapatma etiketinden HEMEN ÖNCE bu kodu ekleyin -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
 
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+
+                    // İkon değişimi
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+            } else {
+                console.error('Menü elemanları bulunamadı!');
+            }
+        });
+    </script>
 </body>
 
 </html>
