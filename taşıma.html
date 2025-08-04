@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -70,36 +73,57 @@
     </header>
 
     <main>
-        <div class="hizmetler_box">
-            <div class="boxxes">
-                <h2>NEDEN INNOX ?</h2>
+        <section class="hizmetler_box" data-scroll="">
+            <h2>NEDEN INNOX ?</h2>
+            <div class="boxxes1">
 
-                <p>Innox Shipping Agency, deniz taşımacılığı ve lojistik alanında sunduğu entegre çözümler ile
-                    müşterilerine sadece bir hizmet değil, uçtan uca bir operasyonel güven sunar. Uluslararası
-                    taşımacılık deneyimimiz, güçlü liman ilişkilerimiz ve uzman ekibimiz sayesinde, her sevkiyatın
-                    zamanında, güvenle ve eksiksiz şekilde gerçekleşmesini sağlıyoruz.
-                </p>
+                <div class="neden-img">
+
+                    <img src="andy-li-CpsTAUPoScw-unsplash.jpg">
+                </div>
+                <div class="neden-biz">
+                    <p>Innox Shipping Agency, deniz taşımacılığı ve lojistik alanında sunduğu entegre çözümler ile
+                        müşterilerine sadece bir hizmet değil, uçtan uca bir operasyonel güven sunar. Uluslararası
+                        taşımacılık deneyimimiz, güçlü liman ilişkilerimiz ve uzman ekibimiz sayesinde, her sevkiyatın
+                        zamanında, güvenle ve eksiksiz şekilde gerçekleşmesini sağlıyoruz. </p>
+                </div>
             </div>
-            <br><br><br><br>
-            <div class="boxxes">
 
+            <div class="boxxes">
                 <h2>HİZMET KAPSAMIMIZ</h2>
-                <ul>
-                    <li><span>Konteyner Taşımacılığı (FCL/LCL):</span>
-                        Tam ve parsiyel konteyner yüklemelerinde, dünya genelinde limanlar arası güvenli taşıma hizmeti.
-                    </li>
-                    <li><span>Yük Sigortalama ve Takip Hizmetil:</span>
-                        Taşımacılığa özel uygun sigorta planları ile yükünüzün güvence altına alınması ve hareketinin
-                        anlık takibi.</li>
-                    <li><span>TDepolama ve Dağıtım Hizmetleri:</span>
-                        Lojistik zinciri içinde ara depolama, konsolidasyon ve son dağıtım gibi hizmetlerle komple çözüm
-                        sunulması.</li>
-                </ul>
+                <div class="icon-box">
+                    <h3>Konteyner Taşımacılığı (FCL/LCL)</h3>
+                    <p>Tam ve parsiyel konteyner yüklemelerinde, dünya genelinde limanlar arası güvenli taşıma hizmeti.
+                    </p>
+                </div>
+                <div class="icon-box">
+                    <h3>Yük Sigortalama ve Takip Hizmetleri</h3>
+                    <p>Taşımacılığa özel uygun sigorta planları ile yükünüzün güvence altına alınması ve hareketinin anlık takibi.
+                    </p>
+                </div>
+                <div class="icon-box">
+                    
+                    <h3>TDepolama ve Dağıtım Hizmetleri</h3>
+                    <p> Lojistik zinciri içinde ara depolama, konsolidasyon ve son dağıtım gibi hizmetlerle komple çözüm sunulması.</p>
+                </div>
+
+            </div>
+            <div class="workflow-container">
+                <div class="step">Yük Bilgilerinin Alınması</div>
+                <div class="arrow">→</div>
+                <div class="step">Nakliye Planlaması ve Rezervasyon</div>
+                <div class="arrow">→</div>
+                <div class="step">Gemiye Yükleme Organizasyonu</div>
+                <div class="arrow">→</div>
+                <div class="step">Liman Boşaltma ve Gümrük İşlemleri</div>
+                <div class="arrow">→</div>
+                <div class="step">Teslimat ve Raporlama</div>
             </div>
 
-        </div>
 
-        <section id="c" class="clearfix">
+        </section>
+
+        <section id="c" class="clearfix" data-scroll="">
             <div class="content">
                 <h2><i class="fa-solid fa-circle-info"></i> Bilgi</h2>
                 <p>Bu web sitesi deneme amaçlıdır.</p>
@@ -126,6 +150,20 @@
     </footer>
     <!-- </body> kapatma etiketinden HEMEN ÖNCE bu kodu ekleyin -->
     <script>
+
+
+        $(window).on("scroll", function () {
+            $("[data-scroll]").each(function () {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 150) {
+                    $(this).addClass("goster");
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("nav, header, main, footer").hide().fadeIn(1000);
+
+        });
         document.addEventListener('DOMContentLoaded', function () {
             const menuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.querySelector('.nav-links');

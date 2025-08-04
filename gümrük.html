@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -65,45 +66,67 @@
     </header>
 
     <main>
-        <div class="hizmetler_box">
-            <div class="boxxes">
-                <h2>NEDEN INNOX ?</h2>
+        <section class="hizmetler_box" data-scroll="">
+            <h2>NEDEN INNOX ?</h2>
+            <div class="boxxes1">
 
-                <p>Denizcilik operasyonlarının en hassas ve zaman kritik aşamalarından biri olan gümrük işlemleri,
-                    uzmanlık ve dikkat gerektirir.
-                    <br>
-                    Innox Shipping Agency olarak, ithalat, ihracat ve transit geçişlerde
-                    gereken tüm gümrük belgelerinin hazırlanmasını, takibini ve onay süreçlerini sizin adınıza
-                    titizlikle yürütüyoruz..
-                </p>
+                <div class="neden-img">
+
+                    <img src="gumruk-memuru.jpg">
+                </div>
+                <div class="neden-biz">
+                    <p>Denizcilik operasyonlarının en hassas ve zaman kritik aşamalarından biri olan gümrük işlemleri,
+                        uzmanlık ve dikkat gerektirir.
+
+                        Innox Shipping Agency olarak, ithalat, ihracat ve transit geçişlerde
+                        gereken tüm gümrük belgelerinin hazırlanmasını, takibini ve onay süreçlerini sizin adınıza
+                        titizlikle yürütüyoruz..
+                    </p>
+                </div>
             </div>
-            <br><br><br><br>
-            <div class="boxxes">
 
+            <div class="boxxes">
                 <h2>HİZMET KAPSAMIMIZ</h2>
-                <ul>
-                    <li><span>Gümrük Müşavirliği İş Birliği:</span>
-                        Alanında yetkili gümrük müşavirleri ile doğrudan koordinasyon kurarak, özel izin, muafiyet
-                        ve
-                        teşvik gibi işlemler profesyonelce yürütülür.</li>
-                    <li><span>Liman ve Gümrük Otoriteleriyle Temsil:</span>
-                        Geminizin limana yanaşmasından itibaren, tüm resmi temaslar ve gerekli bildirimler
+                <div class="icon-box">
+                    <h3>Gümrük Müşavirliği İş Birliği</h3>
+                    <p>Alanında yetkili gümrük müşavirleri ile doğrudan koordinasyon kurarak, özel izin, muafiyet ve
+                        teşvik gibi işlemler profesyonelce yürütülür.</p>
+                </div>
+                <div class="icon-box">
+                    <h3>Liman ve Gümrük Otoriteleriyle Temsil</h3>
+                    <p>Geminizin limana yanaşmasından itibaren, tüm resmi temaslar ve gerekli bildirimler
                         tarafımızca
-                        gerçekleştirilir.</li>
-                    <li><span>Transit Gümrük İşlemleri:</span>
-                        Uluslararası geçişlerde gereken transit belgeleri hazırlanır ve sınır geçişleri yasal
+                        gerçekleştirilir.</p>
+                </div>
+                <div class="icon-box">
+                    <h3>Transit Gümrük İşlemleri</h3>
+                    <p> Uluslararası geçişlerde gereken transit belgeleri hazırlanır ve sınır geçişleri yasal
                         mevzuata
-                        uygun şekilde organize edilir.</li>
-                </ul>
+                        uygun şekilde organize edilir.</p>
+                </div>
+
+            </div>
+            <div class="workflow-container">
+                <div class="step">Ön Bilgi ve Evrak Toplama</div>
+                <div class="arrow">→</div>
+                <div class="step">Belge Kontrolü ve Ön Hazırlık</div>
+                <div class="arrow">→</div>
+                <div class="step">Gümrük Beyannamesi Hazırlığı</div>
+                <div class="arrow">→</div>
+                <div class="step">Resmî Gümrük İşlemleri</div>
+                <div class="arrow">→</div>
+                <div class="step">Belge Takibi ve Teslimi</div>
+                <div class="arrow">→</div>
+                <div class="step">Arşivleme ve Raporlama</div>
             </div>
 
-
-        </div>
-
+        </section>
 
 
 
-        <section id="c" class="clearfix">
+
+
+        <section id="c" class="clearfix" data-scroll="">
             <div class="content">
                 <h2><i class="fa-solid fa-circle-info"></i> Bilgi</h2>
                 <p>Bu web sitesi deneme amaçlıdır.</p>
@@ -132,6 +155,18 @@
 
     <!-- </body> kapatma etiketinden HEMEN ÖNCE bu kodu ekleyin -->
     <script>
+        $(window).on("scroll", function () {
+            $("[data-scroll]").each(function () {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 150) {
+                    $(this).addClass("goster");
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("nav, header, main, footer").hide().fadeIn(1000);
+
+        });
         document.addEventListener('DOMContentLoaded', function () {
             const menuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.querySelector('.nav-links');

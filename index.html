@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -25,7 +27,7 @@
         <div class="navbar clearfix">
             <div id="logo-box">
                 <a href="index.html"><img class="logo" src="innox logo zeminsiz.png" alt=""></a>
-                
+
             </div>
             <!-- EKLENEN KISIM - Mobil Menü Butonu -->
             <button class="mobile-menu-btn">
@@ -74,7 +76,7 @@
     </header>
 
     <main>
-        <section id="a">
+        <section id="a" data-scroll="">
             <div class="content1">
                 <h2>DENİZDEN KARAYA, HER ADIMDA BİZ VARIZ</h2>
                 <div class="neden-box">
@@ -105,7 +107,7 @@
         </section>
 
 
-        <section id="b">
+        <section id="b" data-scroll="">
 
             <h2>HİZMETLERİMİZ</h2>
             <div class="container">
@@ -133,7 +135,7 @@
             </div>
         </section>
 
-        <section id="c" class="clearfix">
+        <section id="c" class="clearfix" data-scroll="">
             <div class="content">
                 <h2><i class="fa-solid fa-circle-info"></i> Bilgi</h2>
                 <p>Bu web sitesi deneme amaçlıdır.</p>
@@ -168,6 +170,20 @@
     </main>
 
     <script>
+        $(window).on("scroll", function () {
+            $("[data-scroll]").each(function () {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 150) {
+                    $(this).addClass("goster");
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("nav, header, main, footer").hide().fadeIn(1000);
+
+        });
+
         document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
 
@@ -181,6 +197,8 @@
                 icon.classList.add('fa-bars');
             }
         });
+
+
     </script>
 
 
